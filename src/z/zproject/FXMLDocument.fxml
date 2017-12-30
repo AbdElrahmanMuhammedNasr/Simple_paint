@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="z.zproject.FXMLDocumentController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="1360.0">
+         <items>
+            <JFXColorPicker fx:id="color" prefHeight="28.0" prefWidth="75.0" />
+            <JFXButton disable="true" prefHeight="25.0" prefWidth="66.0" text=" " />
+            <JFXComboBox fx:id="shape" onAction="#shapeT" prefHeight="25.0" prefWidth="104.0" promptText="Shape" />
+            <JFXButton fx:id="size" disable="true" prefHeight="25.0" prefWidth="75.0" text=" " />
+            <JFXComboBox fx:id="comboSize" prefHeight="25.0" prefWidth="71.0" promptText="SIZE" />
+            <JFXButton disable="true" prefHeight="25.0" prefWidth="79.0" text="Location" />
+            <Slider fx:id="sliderLocation" max="700.0" onMouseMoved="#getLocation" prefHeight="19.0" prefWidth="331.0" showTickLabels="true" showTickMarks="true" />
+            <JFXButton onMousePressed="#easerL" prefHeight="25.0" prefWidth="87.0" text="ERASE" />
+         </items>
+      </ToolBar>
+      <Canvas fx:id="ca" height="655.0" layoutX="4.0" layoutY="41.0" onMouseDragged="#dragged" onMousePressed="#press" width="1360.0" />
+   </children>
+</Pane>
